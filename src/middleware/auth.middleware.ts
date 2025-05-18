@@ -35,3 +35,11 @@ export const authenticate = (
     return res.status(401).json({ message: "Token inválido" });
   }
 };
+
+// Middleware para verificar se o usuário está autenticado
+export const requireAuth = (req: Request, res: Response, next: NextFunction) => {
+  if (!req.userId) {
+    return res.status(401).json({ message: "Unauthorized" });
+  }
+  next();
+};
