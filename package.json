@@ -9,7 +9,7 @@
     "studio": "npx prisma studio",
     "dev:all": "concurrently \"npm run dev\" \"npm run studio\"",
     "prisma:migration": "npx prisma migrate dev --name init",
-    "start": "npm run prisma:migration && node src/index.js"
+    "start": "npm run prisma:migration && node src/index.ts"
   },
   "keywords": [],
   "author": "",
