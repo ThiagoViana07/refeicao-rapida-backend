@@ -8,7 +8,7 @@
     "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
     "studio": "npx prisma studio",
     "dev:all": "concurrently \"npm run dev\" \"npm run studio\"",
-    "start": "npm run prisma:migration && node index.js"
+    "start": "npm run prisma:migration && node src/index.js"
   },
   "keywords": [],
   "author": "",
